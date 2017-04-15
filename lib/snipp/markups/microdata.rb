@@ -61,7 +61,7 @@ module Snipp
         attrs = ''
         attrs << " itemprop=\"#{escape ? ERB::Util.h(options.delete :prop) : options.delete(:prop)}\"" if options.key? :prop
         attrs << " itemscope" if options.delete :scope
-        attrs << " itemtype=\"http://data-vocabulary.org/#{options.delete(:type).to_s.camelize}\"" if options.key? :type
+        attrs << " itemtype=\"http://schema.org/#{options.delete(:type).to_s.camelize}\"" if options.key? :type
         attrs.html_safe
       end
 
